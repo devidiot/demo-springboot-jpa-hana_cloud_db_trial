@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driverClassName: com.sap.db.jdbc.Driver
+    url: jdbc:sap://7d81a93f-b9f1-4ddd-8a3e-1e69d412ca35.hana.trial-us10.hanacloud.ondemand.com:443
+    username: DBADMIN
+    password: Signin1!
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      dialect: org.hibernate.dialect.HANAColumnStoreDialect
+      show_sql: true
+      format_sql: true
+      use_sql_comments: true
+      ddl-auto: create
