@@ -1,7 +1,7 @@
 
 @hostport=127.0.0.1:8080
 @entity=user
-@uuid=3a2ff586-f101-497f-955c-6e1090bcda48
+@uuid=3d7ca91b-1817-4a5c-842c-f64efc2bd043
 
 
 ####
@@ -9,7 +9,6 @@ POST http://{{hostport}}/{{entity}}/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "uid": "3a2ff586-f101-497f-955c-6e1090bcda48",
   "username": "ryan@starj.org",
   "password": "Password1",
   "firstName": "Ryan",
