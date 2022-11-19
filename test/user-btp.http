@@ -1,0 +1,78 @@
+
+@hostport=starj-boot-jpa-demo.cfapps.us10.hana.ondemand.com
+@entity=user
+@uuid=27cf8708-d31e-4ae9-9ed1-da762f603674
+
+
+####
+POST https://{{hostport}}/{{entity}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "ryan@starj.org",
+  "password": "Password1",
+  "firstName": "Ryan",
+  "lastName": "World",
+  "dayOfBirth": "20020531",
+  "use": true
+}
+
+####
+GET https://{{hostport}}/{{entity}} HTTP/1.1
+Content-Type: application/json
+
+####
+GET https://{{hostport}}/{{entity}}/{{uuid}} HTTP/1.1
+Content-Type: application/json
+
+
+####
+PUT https://{{hostport}}/{{entity}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "uid": "{{uuid}}",
+  "username": "ryan@starj.org",
+  "password": "Password1",
+  "firstName": "Ryan",
+  "lastName": "World",
+  "dayOfBirth": "20020531",
+  "use": true
+}
+
+####
+PUT https://{{hostport}}/{{entity}}/{{uuid}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "ryan@starj.org",
+  "password": "******",
+  "firstName": "Ryan",
+  "lastName": "World",
+  "dayOfBirth": "20020531",
+  "use": false
+}
+
+####
+PATCH https://{{hostport}}/{{entity}}/{{uuid}} HTTP/1.1
+Content-Type: application/json-patch+json
+
+[
+    {"op":"replace","path":"/password","value":"5678"}
+]
+
+####
+PATCH https://{{hostport}}/{{entity}}/{{uuid}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "lastName": "Happy Together",
+  "use": false
+}
+
+
+####
+DELETE https://{{hostport}}/{{entity}}/{{uuid}} HTTP/1.1
+Content-Type: application/json
+
+
