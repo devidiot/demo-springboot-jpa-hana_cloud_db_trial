@@ -1,7 +1,7 @@
 
 @hostport=127.0.0.1:8080
 @entity=user
-@uuid=20db2306-624e-41f5-b11c-36c91ea314c0
+@uuid=3a2ff586-f101-497f-955c-6e1090bcda48
 
 
 ####
@@ -9,11 +9,12 @@ POST http://{{hostport}}/{{entity}}/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "username": "ryan@abc.com",
-  "password": "1234",
+  "uid": "3a2ff586-f101-497f-955c-6e1090bcda48",
+  "username": "ryan@starj.org",
+  "password": "Password1",
   "firstName": "Ryan",
-  "lastName": "Happy",
-  "dayOfBirth": "20220823",
+  "lastName": "World",
+  "dayOfBirth": "20020531",
   "use": true
 }
 
@@ -32,11 +33,11 @@ Content-Type: application/json
 
 {
   "uid": "{{uuid}}",
-  "username": "ryan@abc.com",
-  "password": "5678",
+  "username": "ryan@starj.org",
+  "password": "Password1",
   "firstName": "Ryan",
-  "lastName": "Happy",
-  "dayOfBirth": "20220823",
+  "lastName": "World",
+  "dayOfBirth": "20020531",
   "use": true
 }
 
@@ -45,11 +46,11 @@ PUT http://{{hostport}}/{{entity}}/{{uuid}} HTTP/1.1
 Content-Type: application/json
 
 {
-  "username": "ryan@abc.com",
-  "password": "5678",
+  "username": "ryan@starj.org",
+  "password": "******",
   "firstName": "Ryan",
-  "lastName": "Happy is a dog.",
-  "dayOfBirth": "20220823",
+  "lastName": "World",
+  "dayOfBirth": "20020531",
   "use": false
 }
 

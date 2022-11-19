@@ -34,15 +34,15 @@ public class UserService {
         return user;
     }
 
-    public void updateById(String uid, User user) throws IllegalArgumentException, IllegalAccessException {
-        User storedUser = this.findById(uid);
-        storedUser.merge(user);
-        repository.save(storedUser);
-    }
-
     public void applyById(String uid, User user) throws IllegalArgumentException, IllegalAccessException {
         User storedUser = this.findById(uid);
         storedUser.apply(user);
+        repository.save(storedUser);
+    }
+
+    public void updateById(String uid, User user) throws IllegalArgumentException, IllegalAccessException {
+        User storedUser = this.findById(uid);
+        storedUser.update(user);
         repository.save(storedUser);
     }
 }

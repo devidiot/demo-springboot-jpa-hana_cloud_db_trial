@@ -43,7 +43,7 @@ public class BaseModel {
         }
     }
 
-    public void merge(User source) throws IllegalArgumentException, IllegalAccessException {
+    public void update(User source) throws IllegalArgumentException, IllegalAccessException {
         Field[] fields = User.class.getDeclaredFields();
         for (Field field : fields) {
             field.setAccessible(true);

@@ -82,7 +82,7 @@ public class UserController {
         try {
             User user = userService.findById(uid);
             User userPatched = applyPatchToUser(patch, user);
-            userService.updateById(uid, userPatched);
+            userService.applyById(uid, userPatched);
             return ResponseEntity.ok(userPatched);
         } catch (JsonPatchException | JsonProcessingException | IllegalArgumentException | IllegalAccessException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
