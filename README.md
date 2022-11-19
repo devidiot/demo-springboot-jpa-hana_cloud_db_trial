@@ -24,7 +24,7 @@ gradle bootRun
 
 [http://localhost:8080/user/](http://localhost:8080/user)
 
-**혹은 Visual Studio Code의 RestClient 확장 프로그램을 설치 후 루트 폴더의 "test-user.http"파일을 실행한다.**
+**혹은 Visual Studio Code의 REST Client 확장 프로그램을 설치 후 "test/user.http"파일을 실행한다.**
 
 
 
